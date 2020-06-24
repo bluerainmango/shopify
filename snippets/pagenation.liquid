@@ -1,0 +1,14 @@
+{% assign collection = collections.all %}
+
+{% paginate collection.products by 1 %}
+    {% for product in collection.products %}
+
+        <a href="{{ product.url }}">
+            <div>
+                <img src="{{ product.featured_image | product_img_url: 'medium' }}"/>
+            </div>
+        </a>
+
+    {% endfor %}
+    {{ paginate | default_pagination }}
+{% endpaginate %}
