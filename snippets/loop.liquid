@@ -1,0 +1,29 @@
+{% assign words = "fruit:apple,vegetable:carrot,cloth:t-shirt,denim:jeans" | split: ',' %}
+
+{% for word in words %}
+    {% assign keyvalue = word | split: ':' %}
+
+    {% case keyvalue[0]%}
+        {% when 'fruit' %}
+            {% assign fruit = keyvalue[1] %}
+        {% when 'vegetable' %}
+            {% assign vegetable = keyvalue[1] %}
+        {% when 'cloth' %}
+            {% assign cloth = keyvalue[1] %}
+        {% when 'denim' %}
+            {% assign denim = keyvalue[1] %}
+    {% endcase %}
+
+{% endfor %}
+
+<h2>Question 5.</h2>
+<ul>
+    <li>fruit:
+        {{fruit}}</li>
+    <li>vegetable:
+        {{vegetable}}</li>
+    <li>cloth:
+        {{cloth}}</li>
+    <li>denim:
+        {{denim}}</li>
+</ul>
