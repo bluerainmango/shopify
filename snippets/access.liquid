@@ -1,0 +1,23 @@
+{% assign product = all_products["blue-t-shirt"] %}
+
+{% assign id = product.id%}
+{% assign title = product.title %}
+{% assign handle = product.handle %}
+{% assign price = product.price %}
+{% assign url = product.url %}
+{% assign image = product.featured_image.src %}
+
+
+<div>
+    <p>id:
+        {{id}}</p>
+    <p>title:
+        {{title}}</p>
+    <p>handle:
+        {{handle}}</p>
+    <p>price:
+        {{price}}</p>
+    <p>url:
+        {{url}}</p>
+    <img src="{{image | img_url: 'medium'}}">
+</div>
