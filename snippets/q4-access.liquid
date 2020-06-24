@@ -8,16 +8,11 @@
 {% assign image = product.featured_image.src %}
 
 
-<div>
-    <p>id:
-        {{id}}</p>
-    <p>title:
-        {{title}}</p>
-    <p>handle:
-        {{handle}}</p>
-    <p>price:
-        {{price}}</p>
-    <p>url:
-        {{url}}</p>
-    <img src="{{image | img_url: 'medium'}}">
-</div>
+<ul>
+    <li>id:{{id}}</li>
+    <li>title:{{title}}</li>
+    <li>handle:{{handle}}</li>
+    <li>price:{{price}}</li>
+    <li>url:{{url}}</li>
+    <li>image:<img src="{{image | img_url: 'small'}}"></li>
+</ul>
