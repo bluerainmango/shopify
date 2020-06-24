@@ -1,0 +1,23 @@
+<section>
+    <h1>
+        {% if section.settings.one-line-of-text != blank %}
+            {{section.settings.one-line-of-text}}
+        {% endif %}
+    </h1>
+</section>
+
+{% schema %}
+
+{
+    "name": "Text",
+    "settings": [
+        {
+            "type": "text",
+            "id": "one-line-of-text",
+            "label": "One Line of Text",
+            "default": "This is a customizable one line of text"
+        }
+    ]
+}
+
+{% endschema %}
